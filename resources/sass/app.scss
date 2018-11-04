@@ -1,0 +1,108 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.control.number {
+  display: inline-flex;
+  margin-bottom: 1rem;
+  position: relative;
+  width: 100%;
+  max-width: calc(180 / 16 * 1rem);
+
+  input {
+    border: 0;
+    border-radius: 3px;
+    font-size: .875rem;
+    flex: 1 0;
+    line-height: 1.65;
+    height: 2.5em;
+    margin: 0 auto;
+    padding-left: .5rem;
+    padding-right: calc(82 / 16 * 1rem);
+    text-align: left;
+    width: 100%;
+    max-width: 100%;
+    vertical-align: top;
+    // Firefox-specific hack
+    -moz-appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem $link-color;
+    }
+  }
+
+  button {
+    background-color: #fff;
+    border: 0px solid $gray-light;
+    border-left-width: 1px;
+    border-radius: 0;
+    color: $gray-dark;
+    cursor: pointer;
+    flex: 0 1;
+    font-family: sans-serif;
+    font-size: .875rem;
+    font-weight: bold;
+    line-height: 1.7;
+    position: absolute;
+    top: .0625rem;
+    text-align: center;
+    width: 2.5rem;
+    height: 2.375rem;
+    user-select: none;
+    z-index: 5;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: $link-color;
+      color: $link-color;
+      outline: none;
+    }
+
+    &:hover {
+      & ~ .input {
+        border: 1px solid $link-color;
+      }
+    }
+    &:active,
+    &:focus {
+      & ~ .input {
+        border: 0;
+        box-shadow: 0 0 0 0.2rem $link-color;
+      }
+    }
+    &:disabled,
+    &.is-disabled {
+      color: $gray-medium;
+      opacity: 1;
+    }
+  }
+
+  .increment-button {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    right: calc(1.5 / 14 * 1rem);
+  }
+
+  .decrement-button {
+    right: calc(41.5 / 14 * 1rem);
+  }
+}
